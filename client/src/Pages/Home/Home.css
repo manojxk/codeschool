@@ -1,0 +1,233 @@
+.home-container {
+  height: 82vh;
+  text-align: center;
+  margin: auto auto;
+  display: flex;
+  background-size: cover;
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./images/output-onlineimagetools.png");
+  background-size: cover;
+  background-color: transparent;
+  color: white;
+  align-items: center;
+  align-content: space-between;
+  padding: 2rem 10rem 2rem 10rem;
+  justify-content: space-between;
+}
+
+.left-home-col p {
+  color: silver;
+  font-size: 1.3rem;
+}
+
+.left-home-col {
+  text-align: left;
+  margin-right: 30%;
+  flex-wrap: wrap;
+}
+
+.home-btn-signup {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #7971ea;
+  border-color: #7971ea;
+}
+.home-btn-signup:hover {
+  color: #fff;
+  background-color: #5a50e5;
+  border-color: #4f45e3;
+}
+.home-btn-signup:focus,
+.home-btn-signup.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(121, 113, 234, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(121, 113, 234, 0.5);
+  background-color: midnightblue;
+}
+
+.home-btn-signin {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  color: #7971ea;
+  background-color: #fff;
+  border-color: #777;
+}
+.home-btn-signin:hover {
+  color: #4f45e3;
+  background-color: #ddd;
+  border-color: #777;
+}
+.home-btn-signin:focus,
+.home-btn-signin.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(121, 113, 234, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(121, 113, 234, 0.5);
+  background-color: #4f45e3;
+}
+
+.feature {
+  font-size: 1.2rem;
+  display: flex;
+  margin: 2rem 0rem;
+  padding-right: 0%;
+  margin-right: 0rem;
+}
+
+.feature-img {
+  position: relative;
+  float: left;
+  width: 7rem;
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
+.feature-text {
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
+.feature h5 {
+  margin: 0rem 0rem 0.4rem 0rem;
+  padding-bottom: 0%;
+  margin-right: 2rem;
+  padding-right: 0%;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 4%;
+  width: 70%;
+}
+
+.right-home-col {
+  padding-right: 0%;
+  margin-right: 0;
+  color: #ddd;
+}
+
+.how-it-works {
+  padding: 3rem 4rem 5rem;
+}
+
+.how-it-works-main-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  background-image: linear-gradient(#c5c1fa, #6b61f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.15rem;
+  transition: all 0.2s;
+}
+.how-it-works-header {
+  background-image: linear-gradient(#c5c1fa, #6b61f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s;
+}
+
+.how-it-works-row {
+  text-align: center;
+  display: flex;
+}
+
+.how-it-works-item {
+  border-radius: 10px;
+  margin: 1rem;
+  margin: auto;
+  width: 70%;
+}
+
+.how-it-works-img-container {
+  margin: 0 auto;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-it-works__img {
+  margin: 1rem;
+  width: 8rem;
+}
+
+.how-it-works__img:hover {
+  filter: invert(27%) sepia(51%);
+}
+
+.how-it-works-paragraph {
+  padding: 0.3rem 1rem;
+  height: 6rem;
+}
+
+@media screen and (max-width: 1255px) {
+  .feature-text {
+    font-size: 0.8rem;
+  }
+
+  .feature-img {
+    width: 4rem;
+  }
+
+  .left-home-col {
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 10rem;
+  }
+
+  .home-container {
+    display: inherit;
+    width: 100%;
+    height: 120vh;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .left-home-col p {
+    font-size: 1rem;
+    width: 150%;
+  }
+
+  .left-home-col {
+    width: 120%;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+  }
+  .how-it-works-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .home-container {
+    padding-left: 6rem;
+    padding-bottom: 2rem;
+    height: 190vh;
+  }
+  .how-it-works-item {
+    margin-top: 3rem;
+    width: 20rem;
+  }
+  .how-it-works-main-header {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-container {
+    height: 210vh;
+  }
+}

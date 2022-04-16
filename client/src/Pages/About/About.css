@@ -1,0 +1,54 @@
+.about-bottom-container {
+  display: flex;
+}
+
+.about-top-container {
+  height: 20rem;
+  background-image: linear-gradient(#d3d0fa, #b0aafd);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.about-info{
+  display: block;
+  width: 60%;
+}
+
+.andrew-pic {
+  width: 12.5rem;
+}
+
+.about-answer {
+  flex: 1 1 auto;
+  padding: 1.755rem;
+  text-align: center;
+}
+
+.about-bw-container {
+  background-color: rgb(243, 233, 250);
+  padding: 3rem;
+}
+
+.mt-title{
+  text-align: center;
+}
+
+.person {
+  width: 30rem;
+  margin: 1rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  box-shadow: 1px 3px 30px rgba(0,0,0,.3);
+}
+
+.person-image {
+  height: 200px;
+  margin: 4%;
+  border-radius: 100%;
+}

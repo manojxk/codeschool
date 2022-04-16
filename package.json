@@ -1,0 +1,28 @@
+{
+  "name": "codeschool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "backend": "nodemon server/app.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently  \"npm run backend\" \"npm run start --prefix client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojxk/codeschool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manojxk/codeschool/issues"
+  },
+  "homepage": "https://github.com/manojxk/codeschool#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "server": "file:server"
+  }
+}
