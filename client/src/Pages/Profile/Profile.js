@@ -25,12 +25,9 @@ export default function Profile() {
     const getUser = async () => {
       try {
         const token = localStorage.getItem("auth-token");
-        console.log('token------------', token)
         const userRes = await Axios.get("/users/", {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log('userRes------------', userRes)
-
         setProfileData({
           firstName: userRes.data.firstName,
           lastName: userRes.data.lastName,

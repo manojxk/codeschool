@@ -8,9 +8,9 @@ const auth = require("../middleware/auth");
 const User = require("../models/User");
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
-const { googleLogin, facebooklogin } = require('../controllers/authController')
+const { googleLogin } = require('../controllers/authController')
 router.post("/googlelogin", googleLogin);
 
-router.post("/facebooklogin", facebooklogin);
+
 
 module.exports = router;

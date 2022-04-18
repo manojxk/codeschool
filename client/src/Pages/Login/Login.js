@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import UserContext from "../../context/UserContext";
 import { GoogleLogin } from "react-google-login";
-import FacebookLogin from "react-facebook-login";
 import { useHistory } from "react-router-dom";
 import ErrorNotice from "../../components/misc/ErrorNotice";
 import Particles from "react-particles-js";
@@ -92,26 +91,7 @@ export default function Login() {
     }
   };
 
-  const responseFacebook = async (res) => {
 
-    try {
-      const facebookRes = await Axios.post("/auth/facebooklogin", {
-        accessToken: res.accessToken,
-        userID: res.userID,
-      });
-
-      setUserData({
-        token: facebookRes.data.token,
-        user: facebookRes.data.user.id,
-      });
-
-      localStorage.setItem("auth-token", facebookRes.data.token);
-
-      history.push("/app/dashboard");
-    } catch (error) {
-      console.log("responseFacebook -> error", error);
-    }
-  };
 
   return (
     <div className="login-outer-container">
@@ -207,14 +187,7 @@ export default function Login() {
                 </button>
               )}
             />
-            <FacebookLogin
-              appId="3479849305373234"
-              autoLoad={false}
-              fields="name,email,picture"
-              callback={responseFacebook}
-              cssClass="social-btn facebook-btn-login"
-              textButton="Sign in with Facebook"
-            />
+
           </div>
         </div>
       </div>

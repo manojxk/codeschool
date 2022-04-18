@@ -61,8 +61,6 @@ const loginUser = async (req, res) => {
                 .status(400)
                 .json({ msg: "No account with this email has been registered." });
         }
-        console.log('user', user)
-        console.log('user.password', user.password)
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(400).json({ msg: "Incorrect Password" });
@@ -99,7 +97,6 @@ const deleteUser = async (req, res) => {
 const editUserDetails = async (req, res) => {
     try {
         let { firstName, lastName, prevEmail, email, bio, skills } = req.body;
-        console.log('profile edit ----------', req.body)
         //User ID
         const id = (await User.findOne({ email: prevEmail }))._id;
         //Email Validation
